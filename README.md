@@ -202,6 +202,18 @@ docker build -t \
     .
 ```
 
+Running in Kubernetes
+=====================
+
+In case you would like to deploy element-web in a kubernetes cluster you can use
+the provided [Kubernetes-sample.yaml](Kubernetes-sample.yaml) as a starting point.
+
+Note that the content of the required `config.json` is defined inside this Kubernetes-sample.yaml because it needs
+to be put in your Kubernetes cluster as a `ConfigMap`.
+
+So to use it you must create a copy of this file and modify it so it meets the requirements of your environment
+before you can install it with something like `kubectl apply -f my-element-web.yaml`.
+
 config.json
 ===========
 
